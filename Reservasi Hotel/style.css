@@ -1,89 +1,112 @@
-*,
-*::before,
-*::after { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.55;
-  color: #222;
-  background: #eef6fb;
-  padding: 24px 12px;
+* { 
+    box-sizing: border-box; 
 }
 
-h1{
-  max-width: 640px;
-  margin: 0 auto 16px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: 700;
-  color: #253f4f;
+form {
+  width: min(680px, 92%);
+  margin: 0 auto 24px; 
+  float: none;
 }
 
-form{
-  width: 92%;
-  max-width: 640px;
-  margin: 0 auto;
-  background: #fff;
-  border: 1px solid #000000;
-  border-radius: 6px;
-  padding: 18px 20px;
+body {
+    font-family: "Segoe UI";  
+    line-height: 1.55;
+    background:
+        radial-gradient(900px 480px at 12% 20%, rgba(74,222,128,.18), transparent 100%),  
+        radial-gradient(800px 440px at 88% 15%, rgba(134,239,172,.16), transparent 100%),
+        linear-gradient(135deg, #f3fbf7, #e9f7f1 55%, #f7fff9); 
+    color: #1f2d24; 
 }
 
-fieldset{
-  margin: 16px 0;
-  padding: 16px;
-  border: 1px solid #000000;
-  border-radius: 6px;
-  background: #fff;
-}
-legend{
-  padding: 0 6px;
-  font-weight: 700;
-  color: #255e7f;
-  font-size: 18px;
+h1 {
+    font-family: Arial;    
+    text-align: center;
+    color: #1b3b2b;   
+    font-weight: 800;
+    letter-spacing: .3px;
+    margin: 24px 0;
 }
 
-ol{ list-style: none; margin: 0; padding: 0; }
-ol > li{ margin: 12px 0 14px; }
+table { 
+    width: 70%; 
+    margin: auto auto;
+}
 
-label{ display: block; margin-bottom: 6px; font-weight: 600; }
+fieldset {
+    border: 1.5px solid rgb(141, 200, 164);   
+    border-radius: 10px;                       
+    padding: 16px 18px;                        
+    background: linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.7)); 
+    box-shadow: 0 8px 24px rgba(27, 59, 43, .08); 
+}
+
+legend {
+    padding: 0 0.5rem;    
+    color: #1b3b2b;        
+    font-size: 20px;
+    font-weight: 700;
+}
+
+fieldset ol { 
+    list-style: none;       
+    padding: 0;             
+}
+fieldset ol li { 
+    margin: 10px 0 0;          
+    color: #1f2d24; 
+    font-weight: 600; 
+}
+
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="date"],
-select{
-  display: block;
-  width: 100%;
-  max-width: 100%;            
-  padding: 10px 12px;
-  border: 1px solid #000000;
-  border-radius: 6px;
-  background: #fff;
-  outline: none;
+select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    border: 1px solid rgba(27,59,43,.22);       
+    border-radius: 6px;
+    background: rgba(255,255,255,.9);          
+    color: #1f2d24;                             
+    outline: none;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .06s ease;
 }
-input:focus, select:focus{ border-color: #2f8fbe; }
-
-.radio-row label{ display: inline; font-weight: normal; margin-right: 12px; }
-.radio-row input{ margin-right: 4px; }
-
-input[type="submit"]{
-  background: #2f8fbe;
-  color: #fff;
-  border: 1px solid #25739a;
-  border-radius: 6px;
-  padding: 10px 14px;
-  cursor: pointer;
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus {
+    box-shadow: 0 0 0 6px rgba(34,197,94,.25);  
+    border-color: rgb(34,197,94);                
 }
-input[type="submit"]:hover{ background: #25739a; }
 
-fieldset[style],
-div[style]{ width: 100% !important; }
+input[type="submit"] {
+    padding: 12px 50px;
+    margin: 14px 0 24px;
+    font-weight: 800;
+    color: #ffffff;                              
+    background: linear-gradient(#35b56f, #25a05f); 
+    border: 1px solid #208e55;                  
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(16, 185, 129, .28);   
+    cursor: pointer;
+    letter-spacing: .2px;
+}
+input[type="submit"]:hover {                
+    filter: brightness(1.12) saturate(1.1);
+    transform: translateY(-2px);          
+}
 
-@media (max-width: 420px){
-  body{ padding: 16px 8px; }
-  h1{ font-size: 20px; }
-  form{ padding: 16px; }
+input[type="submit"]:active {            
+    transform: translateY(0); 
+}
+
+fieldset::after {
+    content: "🌿";
+    float: right;                           
+    margin-top: -6px;
+    opacity: .9;
+    font-size: 18px;
 }
